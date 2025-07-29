@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Card Battle Game - Coming Soon!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+        }
+        
+        .container {
+            text-align: center;
+            background: rgba(0,0,0,0.3);
+            padding: 40px;
+            border-radius: 20px;
+            border: 3px solid #ffd700;
+            max-width: 500px;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .cards {
+            font-size: 4em;
+            margin: 20px 0;
+        }
+        
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        
+        .button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 20px 10px;
+            transition: transform 0.2s;
+        }
+        
+        .button:hover {
+            transform: scale(1.05);
+        }
+        
+        .status {
+            background: rgba(0,255,0,0.2);
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐉 Fantasy Card Battle 🗡️</h1>
+        <div class="cards">🃏⚔️🛡️</div>
+        
+        <div class="status" id="status">
+            ✅ GitHub Pages is working!
+        </div>
+        
+        <p>This epic card battle game is being built by a father and son coding team!</p>
+        
+        <p><strong>Coming Soon:</strong><br>
+        🎯 Turn-based battles<br>
+        🐲 Fantasy creatures<br>
+        ⚡ Visual combat effects<br>
+        🌐 Online multiplayer</p>
+        
+        <button class="button" onclick="testClick()">🎮 Test Button</button>
+        <button class="button" onclick="showMessage()">✨ Magic Test</button>
+        
+        <p id="message" style="margin-top: 20px; font-style: italic;"></p>
+    </div>
+
+    <script>
+        function testClick() {
+            document.getElementById('message').innerHTML = '🎉 JavaScript is working! Ready to code!';
+            document.getElementById('status').innerHTML = '✅ All systems ready for game development!';
+        }
+        
+        function showMessage() {
+            const messages = [
+                '🧙‍♂️ The coding magic begins...',
+                '⚡ Prepare for an epic adventure!',
+                '🏰 Building the ultimate card battle!',
+                '🎯 Get ready to code some awesome features!'
+            ];
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('message').innerHTML = randomMessage;
+        }
+        
+        // Show current date/time to prove it's live
+        document.addEventListener('DOMContentLoaded', function() {
+            const now = new Date();
+            const timeString = now.toLocaleString();
+            document.getElementById('message').innerHTML = `🕐 Page loaded: ${timeString}`;
+        });
+    </script>
+</body>
+</html>
